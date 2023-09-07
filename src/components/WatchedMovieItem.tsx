@@ -2,9 +2,10 @@ import type { WatchedMovie } from "../types";
 
 type Props = {
   movie: WatchedMovie;
+  onRemoveWatched: (id: string) => void;
 };
 
-function WatchedMovieItem({ movie }: Props) {
+function WatchedMovieItem({ movie, onRemoveWatched }: Props) {
   return (
     <li>
       <img src={movie.Poster} alt={`${movie.Title} poster`} />
@@ -22,6 +23,12 @@ function WatchedMovieItem({ movie }: Props) {
           <span>⏳</span>
           <span>{movie.runtime} min</span>
         </p>
+        <button
+          className="btn-delete"
+          onClick={() => onRemoveWatched(movie.imdbID)}
+        >
+          X
+        </button>
       </div>
     </li>
   );
