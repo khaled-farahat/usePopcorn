@@ -11,7 +11,7 @@ export type WatchedMovie = Movie & {
   userRating: number;
 };
 
-export type MovieDetails = {
+export type MovieDetailsType = {
   Actors: string;
   Awards: string;
   BoxOffice: string;
