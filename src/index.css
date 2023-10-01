@@ -62,8 +62,9 @@ body {
 
 .box::-webkit-scrollbar {
   /* WebKit */
-  width: 0;
-  height: 0;
+  width: 6px;
+  /* height: 0; */
+  visibility: hidden;
 }
 
 .box:hover {
@@ -72,14 +73,8 @@ body {
 }
 
 .box:hover::-webkit-scrollbar {
-  width: 2px;
-  height: auto;
+  visibility: visible;
   background-color: var(--color-background-500);
-}
-
-.box::-webkit-scrollbar:hover{
-  width: 8px;
-  cursor: auto;
 }
 
 .box:hover::-webkit-scrollbar-thumb {
