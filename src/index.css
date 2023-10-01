@@ -57,12 +57,34 @@ body {
   overflow-y: auto;
   position: relative;
   scrollbar-width: none;
-  -ms-overflow-style: none;
+  -ms-overflow-style: none; /* those for fire fox*/
+}
+
+.box::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .box:hover {
   scrollbar-width: auto;
   -ms-overflow-style: auto;
+}
+
+.box:hover::-webkit-scrollbar {
+  width: 2px;
+  height: auto;
+  background-color: var(--color-background-500);
+}
+
+.box::-webkit-scrollbar:hover{
+  width: 8px;
+  cursor: auto;
+}
+
+.box:hover::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 10px;
 }
 
 .loader {
