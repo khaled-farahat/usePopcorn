@@ -56,6 +56,13 @@ body {
   border-radius: 0.9rem;
   overflow-y: auto;
   position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.box:hover {
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
 }
 
 .loader {
@@ -139,6 +146,17 @@ body {
   list-style: none;
   padding: 0.8rem 0;
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.list:hover {
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
 }
 
 .list-watched {
@@ -347,4 +365,146 @@ FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
 */
 
+/* Existing CSS code... */
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 55%; /* Adjust font size for smaller screens */
+  }
+
+  .nav-bar {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    height: auto; /* Adjust height as needed */
+    padding: 1.6rem; /* Adjust padding */
+  }
+
+  .main {
+    flex-direction: column-reverse; /* Change to a column layout */
+    gap: 1.6rem; /* Adjust gap between elements */
+    height: auto;
+  }
+
+  .box {
+    width: 100%; /* Take up full width */
+    max-width: none; /* Remove max-width constraint */
+  }
+
+  .search {
+    width: 100%; /* Take up full width */
+  }
+
+  .list li {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    grid-template-rows: auto auto auto; /* Adjust rows as needed */
+  }
+
+  .logo h1 {
+    font-size: 2rem; /* Adjust font size */
+  }
+
+  .btn-toggle {
+    top: 0.4rem; /* Adjust position */
+    right: 0.4rem; /* Adjust position */
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .list-watched {
+    height: auto; /* Adjust height */
+  }
+
+  .list img {
+    width: 70%;
+  }
+
+  .list li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-center;
+    justify-content: center;
+  }
+
+  .list div {
+    flex-direction: column; /* Change to a column layout */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .list p {
+    gap: 0.4rem; /* Adjust gap between elements */
+  }
+
+  .summary {
+    padding: 1.8rem; /* Adjust padding */
+  }
+
+  .summary h2 {
+    font-size: 1.4rem; /* Adjust font size */
+    margin-bottom: 0.4rem; /* Adjust margin */
+  }
+
+  .summary div {
+    flex-direction: column; /* Change to a column layout */
+    align-items: flex-start; /* Align items to the start */
+    gap: 1.2rem; /* Adjust gap between elements */
+  }
+
+  .summary p {
+    gap: 0.4rem; /* Adjust gap between elements */
+  }
+
+  .details section {
+    padding: 2rem; /* Adjust padding */
+  }
+
+  .details img {
+    width: 100%; /* Take up full width */
+  }
+
+  .details-overview p {
+    gap: 0.4rem; /* Adjust gap between elements */
+  }
+
+  .rating {
+    padding: 1.6rem; /* Adjust padding */
+    gap: 1.2rem; /* Adjust gap between elements */
+  }
+
+  .btn-add {
+    padding: 0.8rem 1.2rem; /* Adjust padding */
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .seconds {
+    width: 6rem; /* Adjust width */
+    padding: 0.2rem; /* Adjust padding */
+    margin-top: 1.6rem; /* Adjust margin */
+  }
+
+  .btn-back {
+    top: 0.2rem; /* Adjust position */
+    left: 0.2rem; /* Adjust position */
+    font-size: 1.8rem; /* Adjust font size */
+  }
+
+  /* Add more specific styles as needed */
+}
+
+@media screen and (max-width: 576px) {
+  /* Additional styles for even smaller screens */
+  body {
+    font-size: 50%; /* Adjust font size for even smaller screens */
+  }
+
+  .nav-bar {
+    padding: 1.2rem; /* Adjust padding */
+  }
+
+  .box {
+    padding: 2rem; /* Adjust padding */
+  }
+
+  .list img {
+    width: 100%; /* Take up full width */
+  }
+}
+
+/* More media queries can be added as needed... */
